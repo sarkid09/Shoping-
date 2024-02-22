@@ -1,0 +1,290 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Animation</title>
+</head>
+<body>
+<centre> <h1 id="animatedText"></h1>
+
+    <script>
+        var words = ["HAPPY", "Swrangsa", "Welcome", "To", "My", "webpages"];
+        var index = 0;
+        var animatedTextElement = document.getElementById("animatedText");
+
+        setInterval(function() {
+            animatedTextElement.innerText = words[index];
+            index = (index + 1) % words.length;
+        }, 1000); // Change text every 1 second (1000 milliseconds)
+    </script>
+    </centre>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <style>
+        /* Basic styles for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .product p {
+            font-size: 1em;
+            color: #777;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cart h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .cart ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        .cart li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .cart .total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Store</h1>
+    </header>
+    <div class="container">
+        <h2>Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="file:///storage/emulated/0/20231125_053904.jpg " alt="Product 1">
+                <h2>Product 1</h2>
+                <p>₹10000.00</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src=" content://com.android.externalstorage.documents/document/primary%3A20231125_055543.jpg" alt="Product 2">
+                <h2>Product 2</h2>
+                <p>₹15000.00</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+            <!-- Add more products here -->
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul>
+                <!-- Cart items will be added here using JavaScript -->
+            </ul>
+            <div class="total">Total: $0.00</div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu</title>
+    <style>
+        /* Style for the menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://www.instagram.com/daimary_____01?igsh=MWZ4dHU5MjgzbDU5eA== ">Instagram</a></li>
+        <li><a href=" time100milion@gmail.com"> Email</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Background</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 1;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+</style>
+</head>
+<body>
+<div class="video-background">
+    <video autoplay muted loop>
+        <source src="content://com.android.externalstorage.documents/document/primary%3ADCIM%2FCamera%2FVID20240103095245.mp4 " type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="content">
+    <h1></h1>
+    <p></p>
+</div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tap to Open 2nd Photo</title>
+<style>
+  .photo {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<img class="photo" id="firstPhoto" src=" file:///storage/emulated/0/20231125_053705.jpg" alt="First Photo">
+<img class="photo" id="secondPhoto" style="display: none;" src=" file:///storage/emulated/0/20231125_053705.jpg" alt="Second Photo">
+
+<script>
+  document.getElementById('firstPhoto').addEventListener('click', function() {
+    document.getElementById('secondPhoto').style.display = 'inline'; // Show second photo
+  });
+</script>
+
+</body>
+</html>
